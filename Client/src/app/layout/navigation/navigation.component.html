@@ -10,8 +10,14 @@
     </div>
 
     <div>
-        <button class="btn btn-primary hr-btn ">LogIn</button>
-        <button class="btn btn-primary hr-btn">SignUp</button>
+        <button class="btn btn-primary hr-btn " (click)="modal.changeStatusModal()">LogIn</button>
+        <app-inmodal [title]="'Iniciar Sesion'" #modal>
+            
+        </app-inmodal>
+        <button class="btn btn-primary hr-btn" (click)="modal2.changeStatusModal()">SignUp</button>
+        <app-regmodal [title]="'Registrarse'" #modal2>
+
+        </app-regmodal>
     </div>
     
 </div>

@@ -5,13 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import * as fromComponents from './components';
 
 
+
+
+
 @NgModule({
   declarations: [...fromComponents.components],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    
   ],
   exports: [
     FormsModule,

@@ -48,7 +48,14 @@
             "Name": "Banano",
             "Price": 450.25,
             "Desc":" papa capira recien sacada de la tierra"
+        },{
+            "id":8,
+            "avatar":"https://ep01.epimg.net/elcomidista/imagenes/2018/02/15/articulo/1518700553_544625_1518704310_media_normal.jpg",
+            "Name": "Fresa",
+            "Price": 150.25,
+            "Desc":" Fresa para la princesa"
         }
 
     ]
+
 }

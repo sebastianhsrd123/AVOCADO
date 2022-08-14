@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+h2 {
+    margin-left:10%;
+    padding-top: 20px;
+    font-weight:bolder;
+    color:rgba(78, 74, 74, 0.845);
+    height: 75px;
+    width: 250px;
+    position: relative;
+    text-align:center;
+    
+    
+}
+
+.texto{
+    margin-left:10%;
+    
+    font-weight:lighter;
+    color:rgba(78, 74, 74, 0.845);
+    font-size: 14px;
+    height: 70px;
+    width: 250px;
+    padding: 0;
+    position: relative;
+    text-align:justify;
+    
+    
+    
+    
+}
+.box{
+    
+    margin-left: 30%;
+    margin-right: 39%;
+    box-shadow: rgb(0 0 0 / 75%) 0px -1px 35px 4px;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+.box-content{
+    position:absolute;    
+    
+    height:100%;
+    width:100%;
+    padding-top:3%;
+}
+label {
+    padding-top: 20px;
+    height: 65px;
+    width: 100px;
+    font-weight:bolder;
+    position: relative;
+    align-items: center;
+    padding: 30px, 20px;
+    margin-left:10%;
+    
+    
+}
+
+input{
+    height: 45px;
+    width: 230px;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    border-width: 0px;
+    border-color: #ffffff;
+    background-color: #e8e6e6;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 6px 3px 13px rgba(0,0,0,.35);
+    text-shadow: -1px 0px 3px rgba(0, 0, 0, 0.449);
+
+}
+input:focus {
+    outline:none;
+    background-color: #e7f2fd;
+    text-shadow: -1px 0px 3px rgba(0, 0, 0, 0);
+}
+
+.small{
+    
+    height: 45px;
+    width: 250px;
+    position: relative;
+    padding-left: 110px;
+    
+}
+
+
+.small-error{
+    
+    height: 15px;
+    width: 328px;
+    position: relative;
+    margin-left:10%;
+    color: #e7f2fd;
+    font-size: 10px;
+    display:flex;
+    margin-left: 10%;
+    padding-left:10px;
+    background-color: #ea0909;
+    border-radius: 3px;
+    
+    
+}
+
+
+
+.pasword-form{
+    margin-left:10%;
+    color: rgba(78, 74, 74, 0.845);
+    font-weight: bold;
+    font-size: 13px
+}
+.pasword-form:hover{
+    color: #4b9def;
+}
+button{
+    margin-left:20%;
+    height: 45px;
+    width: 250px;
+    position: relative;
+    margin-top: 10px;
+    color: #000000;
+    font-size: 15px;
+    padding: 14px;
+    text-decoration: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px #000000;
+    text-shadow: 1px 1px 0px #f7f7f7;
+    border: solid #048b07 1px;
+    background: #00b503;
+    
+    }
+button:hover {
+    background: #80d96c;
+    border: solid #069708 0px;
+    }
+button:disabled {
+    background: #595a59;
+    border: solid #000000 0px;
+    color: #ffffff;
+}
+.Register-form{
+    margin-left:20%;
+    height: 45px;
+    width: 250px;
+    position: relative;
+    
+    color: rgba(78, 74, 74, 0.845);
+    font-size: 14px;
+    display:flex;
+    
+}
+.Register-text{    
+    margin: auto;
+}
+.text{
+    color: #4b9def;
+    font-weight: bold;
+}
+
+.text:hover{
+    color: #097aeb;
+    font-weight: bold;
+}

@@ -4,6 +4,7 @@ import { ProductService } from '@data/services/api/product.service';
 import { ISliderItem } from '@shared/components/slider/islider-item.metadata';
 import { SLIDER_ITEMS } from '@data/constants/slider.const';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -34,36 +35,3 @@ export class ProductListComponent implements OnInit {
   }
 
 }
-/* = [
-    {
-    avatar:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
-    Name: 'Papa',
-    Price: 127.20,
-    Desc:" papa capira recien sacada de la tierra"
-  },
-  {
-    avatar:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
-    Name: 'Papa',
-    Price: 127.20,
-    Desc:" papa capira recien sacada de la tierra"
-  },
-  {
-    avatar:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
-    Name: 'Papa',
-    Price: 127.20,
-    Desc:" papa capira recien sacada de la tierra"
-  },
-  {
-    avatar:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
-    Name: 'Papa',
-    Price: 127.20,
-    Desc:" papa capira recien sacada de la tierra"
-  },
-  {
-    avatar:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
-    Name: 'Papa',
-    Price: 127.20,
-    Desc:" papa capira recien sacada de la tierra"
-  },
-  ]
-  */

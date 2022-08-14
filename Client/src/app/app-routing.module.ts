@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SkeletonComponent } from '@layout/skeleton/skeleton.component';
+import { InmodalComponent } from '@shared/components/modals/inmodal/inmodal.component';
 
 const routes: Routes = [
   {
@@ -8,6 +9,8 @@ const routes: Routes = [
     redirectTo:'/home',
     pathMatch: 'full'
   },
+
+  
   {
     path: '',
     component: SkeletonComponent,
@@ -16,16 +19,21 @@ const routes: Routes = [
         path:'home',
         loadChildren: ()=>
           import('@modules/product/product.module').then( (m) => m.ProductModule)
-        
-
-      }
-    ]
+      }]
   },
+  
   {
-    path: '**',
-    redirectTo:'/home',
-    pathMatch: 'full'
-  },
+    path: 'auth',
+    loadChildren: ()=>
+      import('@modules/auth/auth.module').then( (m)=> m.AuthModule)
+    },
+    
+    {
+      path: '**',
+      redirectTo:'/home',
+      pathMatch: 'full'
+    },
+
 ];
 
 @NgModule({

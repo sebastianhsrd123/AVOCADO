@@ -1,0 +1,77 @@
+<ng-container *ngIf="show">
+
+    <div class="modal">
+
+        <div class="model-content">
+    
+            <div class="modal-header">
+    
+                <h4 class="modal-title">
+                    {{title}}
+                </h4>
+                
+                <ng-template [ngTemplateOutlet]="closeIcon"></ng-template>
+                
+            </div>
+            <div class="modal-container">
+                
+                <div class="Box"></div>
+                <h2 class="h2" >Bienvenido</h2>
+                <div class="texto">Es un gusto tenerte con nosotros. 
+                    Por favor ingresa tu correo y contraseña para continuar.</div>
+
+
+            <div class="Box">
+                <form [formGroup]="loginForm" (ngSubmit)="authenticate();">
+                <label class="label" for="Email">Correo:</label>
+                <br/>
+                <input class="input" type="text" name="Email" value="" placeholder="Ingrese su correo" formControlName="email">
+                
+                <small class="small-error"
+                *ngIf=" loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']">El campo es requerido*
+                </small>
+                <small class="small-error"
+                *ngIf=" loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['pattern']">El correo no es valido*
+                </small>
+                <br [hidden] = " loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required'] || loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['pattern']">
+                
+                <label class="label" for="Contraseña">Contraseña:</label>
+                <br/>
+                <input class="input" type="password" name="Contraseña" value="" placeholder="Ingrese su contraseña" formControlName="password">
+                <small class="small-error"
+                *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">El campo es requerido*
+                </small>
+                <small class="small-error"
+                *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres*
+                </small>
+                <small class="small-error"
+                *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['maxlength']">La contraseña no debe superar los 20 caracteres*
+                </small>
+                <br [hidden] = " loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required'] || loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength'] || loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['maxlength']">
+                <small class="small"><a class='pasword-form' href="#">Olvide mi contraseña?</a></small>
+                <br/>
+                <button type="submit" class="button" [disabled]="!loginForm.valid">Iniciar Sesion</button>
+                <br/>
+                <div class='Register-form'> <p class="Register-text">O deseas <a class="text" href="#">Registrarte</a></p></div>
+                </form>
+
+            </div>
+                
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+
+<ng-template #closeIcon>
+
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 120 120" style=" fill:#000000;" (click)="show = false;">
+        <path fill="#f78f8f" d="M40,77.5C19.322,77.5,2.5,60.678,2.5,40S19.322,2.5,40,2.5S77.5,19.322,77.5,40S60.678,77.5,40,77.5 z"></path>
+        <path fill="#c74343" d="M40,3c20.402,0,37,16.598,37,37S60.402,77,40,77S3,60.402,3,40S19.598,3,40,3 M40,2 C19.013,2,2,19.013,2,40s17.013,38,38,38s38-17.013,38-38S60.987,2,40,2L40,2z"></path>
+        <path fill="#fff" d="M37 20H43V60H37z" transform="rotate(-134.999 40 40)"></path>
+        <path fill="#fff" d="M37 20H43V60H37z" transform="rotate(-45.001 40 40)"></path>
+    </svg>
+
+</ng-template>
+
