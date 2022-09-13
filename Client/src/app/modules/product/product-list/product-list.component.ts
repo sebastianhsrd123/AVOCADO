@@ -11,6 +11,8 @@ import { SLIDER_ITEMS } from '@data/constants/slider.const';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+
+
   public sliderData: ISliderItem[] = SLIDER_ITEMS;
   public products: ICardProduct[] = [
     {
@@ -21,9 +23,9 @@ export class ProductListComponent implements OnInit {
       Desc:" papa capira recien sacada de la tierra"
   },
 ];
-  
-  constructor(private productService: ProductService) { 
-    
+
+  constructor(private productService: ProductService) {
+
      this.productService.getAllProducts().subscribe( r => {
       if(!r.error){
         this.products = r.data;
@@ -32,6 +34,10 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+
+
   }
 
 }
